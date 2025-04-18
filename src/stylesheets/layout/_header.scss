@@ -1,0 +1,151 @@
+@use "../abstracts/" as *;
+
+.header-main {
+  background-color: $background-color;
+  padding: 1rem 0;
+  position: relative;
+  box-shadow: 0 2px 5px #0000001a;
+  font-family: $primary-font;
+  
+  .container {
+    width: 100%;
+    max-width: $mobile;
+    margin: 0 auto;
+    padding: 0 1rem;
+
+    .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+
+      .header-logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: $primary-color;
+        text-decoration: none;
+      }
+
+      .header-nav {
+        display: none;
+      }
+
+      .header-auth {
+        display: none;
+        gap: 0.5rem;
+    
+        button {
+          width: 100px;
+          padding: 0.5rem 1rem;
+          border-radius: 4px;
+          font-weight: 500;
+          cursor: pointer;
+          transition: all 0.3s;
+          font-family: $primary-font;
+        }
+    
+        .header-auth-login {
+          background-color: $button-bg;
+          color: white;
+    
+          &:hover {
+            background: rgba($button-bg, 0.5);
+          }
+        }
+    
+        .header-auth-signup {
+          background-color: $secondly-color;
+          color: white;
+  
+          &:hover {
+            background: rgba($secondly-color, 0.5);
+          }
+        }
+      }
+
+      .header-menu-item { 
+        display: block; 
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    .container {
+      max-width: $medium;
+
+      .header-inner {
+        .header-nav {
+          display: block;
+          position: static;
+          width: auto;
+          background: transparent;
+          @include flex($display: flex, $justify: space-between, $align: center);
+  
+          .nav-ul {
+            display: flex;
+            justify-content: right;
+            gap: 1.5rem;
+      
+            .header-nav-item {
+              border-bottom: none;
+              .header-nav-link {
+                font-size: 1.1rem;
+                padding: 0.5rem;
+              }
+            }
+          }
+        }
+        .header-logo {
+          font-size: 1.75rem;
+        }
+        .header-menu-item img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+  }
+    
+  @include desktop { 
+    .container {
+      min-width: $extra-lager;
+
+      .header-inner {
+        gap: 3rem;
+        .header-nav {
+          display: block;
+          @include flex($display: flex, $justify: right, $align: center);
+      
+          .nav-ul {
+            display: flex;
+            gap: 1.5rem;
+      
+            .header-nav-item {
+              border-bottom: none;
+              .header-nav-link {
+                padding: 0.5rem;
+              }
+            }
+          }
+        }
+
+        .header-menu-item {
+          display: none;
+        }
+
+        .header-auth {
+          display: flex;
+        }
+
+        .header-logo {
+          font-size: 2rem;
+        }
+      } 
+    }
+  }
+}
