@@ -2,10 +2,13 @@
 @use "abstracts/" as *;
 
 // Base
-@use "base/" as *;
+@use "base" as *;
 
 // Components
 @use "components/" as *;
 
 // Layout 
 @use "layout";
+
+// Pages
+@use "pages";
