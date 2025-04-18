@@ -1,0 +1,141 @@
+@use "../../abstracts/" as *;
+
+.hero {
+    @include flex($direction: column, $justify: space-between);
+    background-color: $background-color;
+    font-family: $primary-font;
+    max-width: $mobile;
+    padding: 1rem 0;
+
+    .hero-content {
+        width: 100%;
+        padding: 0 1rem;
+        .tagline {
+            color: $secondly-color;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        
+            &:after {
+                content: "";
+                display: inline-block;
+                width: 40px;
+                height: 2px;
+                background-color: $secondly-color;
+                margin-left: 1rem;
+                vertical-align: middle;
+            }
+        }
+        h3 {
+            font-size: 2rem;
+            font-weight: 700;
+            line-height: 1.8;
+            color: $primary-color;
+            margin-bottom: 1rem;
+        
+            span {
+                color: $secondly-color;
+            }
+        }
+        .description {
+            color: lighten($primary-color, 40%);
+            margin: 1rem 0;
+            line-height: 1.4;
+        }
+        .cta {
+            padding: 15px 20px;
+            background-color: $button-bg;
+            color: $background-color;
+            border: none;
+            border-radius: 0.75rem;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+    
+            &:hover {
+                background-color: darken($button-bg, 10%);
+            }
+        }
+    }
+    .tutor-section {
+        padding: 0 1rem;
+        width: 100%;
+        object-fit: contain;
+    }
+}
+
+@include tablet {
+    .hero {
+        margin: 0 auto;
+        @include flex($direction: row, $justify: center);
+        padding: 2rem 1rem;
+        max-width: $tablet;
+        .hero-content {
+            width: 40%;
+            padding: 0 1rem;
+            .tagline {
+                font-size: 1.2rem;
+            }
+            h3 {
+                font-size: 2.5rem;
+                line-height: 1.5;
+            }
+            .description {
+                font-size: 1.1rem;
+                margin: 1rem 0;
+                line-height: 1.6;
+                max-width: 90%;
+            }
+            .cta {
+                padding: 20px 40px;
+            }
+        }
+        .tutor-section {
+            width: 60%;
+            padding: 0;
+            @include flex($direction: column, $justify: center, $align:center);
+            img {
+                width: 80%;
+                margin-top: -30%;
+            }
+        }
+    }
+}
+
+@include desktop {
+    .hero {
+        @include flex($direction: row, $justify: space-between);
+        min-width: $extra-lager;
+        margin: 0 auto; 
+        column-gap: 2rem;
+        .hero-content {
+            padding: 2rem 2rem 0 2rem;
+            .tagline {
+                font-size: 1.5rem;
+            }
+            h3 {
+                font-size: 2.5rem;
+                line-height: 1.8;
+            }
+            .description {
+                margin: 1rem 0;
+                line-height: 1.4;
+                max-width: 90%;
+            }
+            .cta {
+                padding: 20px 40px;
+            }
+        }
+        .tutor-section {
+            width: 60%;
+            padding: 0;
+            @include flex($direction: column, $justify: center, $align:center);
+            img {
+                width: 100%;
+                margin-top: -30%;
+            }
+        }
+    }
+}
