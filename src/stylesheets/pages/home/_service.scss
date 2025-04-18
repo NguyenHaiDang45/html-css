@@ -37,8 +37,8 @@
             .aim-content {
                 background: radial-gradient(
                     circle at center,
-                    #ddf5ee,
-                    white
+                    $bg-color-circle-1,
+                    $background-color
                 );
                 padding: 0 1rem 1rem 1rem;
             }
