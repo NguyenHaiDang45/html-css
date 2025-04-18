@@ -11,7 +11,7 @@
         max-width: 100%;
         margin: 0 auto;
         .offer {
-            padding: 10px;
+            padding: 0.625rem;
             @include flex($direction: column);
             .offer-info {
                 .tagline1 {
@@ -29,8 +29,8 @@
                     &:after {
                         content: "";
                         display: inline-block;
-                        width: 40px;
-                        height: 2px;
+                        width: 2.5rem;
+                        height: 0.125rem;
                         background-color: $secondly-color;
                         margin-left: 1rem;
                         vertical-align: middle;
@@ -75,19 +75,19 @@
                     display: grid;
                     grid-template-columns: auto auto auto auto;
                     .flag-item {
-                        filter: drop-shadow(0 0 8px #00000099);
-                        width: 120px;
+                        filter: drop-shadow(0 0 0.5rem #00000099);
+                        width: 7.5rem;
                         height: auto;   
                     }
                 
                     .view-all {
                         @include flex($align: center);
                         color: $text-color;
-                        column-gap: 5px;
+                        column-gap: 0.3125rem;
                 
                         img {
-                            width: 28px;
-                            height: 28px;
+                            width: 1.75rem;
+                            height: 1.7rem;
                             flex-shrink: 0;
                         }
                     }
@@ -96,7 +96,7 @@
         }
     }
     .purchase {
-        padding: 10px;
+        padding: 0.625rem;
         @include flex($direction: column);
 
         .text-content {
@@ -114,16 +114,16 @@
                 font-size: 0.9375rem;
             }
             .btn-container {
-                padding: 10px;
+                padding: 0.625rem;
                 @include flex($justify: center);
-                column-gap: 10px;
+                column-gap: 0.625rem;
             
                 .btn {
-                    margin: 10px;
-                    border-radius: 16px;
-                    min-width: 153px;
-                    min-height: 47px;
-                    padding: 15px 20px;
+                    margin: 0.625rem;
+                    border-radius: 1rem;
+                    min-width: 9.5625rem;
+                    min-height: 2.9375rem;
+                    padding: 0.9375rem 1.25rem;
                 }
             
                 .buy {
@@ -135,7 +135,7 @@
                 .find {
                     color: $text-color;
                     background-color: $background-color;
-                    border: 3px solid $secondly-color;
+                    border: 0.1875rem solid $secondly-color;
                 }
             }
         }
@@ -169,7 +169,7 @@
                         font-size: 1.15rem;
                         margin-bottom: 1rem;
                         &:after {
-                            width: 60px;
+                            width: 3.75rem;
                         }
                     }
                     
@@ -189,14 +189,14 @@
                             margin-bottom: 1rem;
                             line-height: 1.8;
                             font-size: 1rem;
-                            margin-top: -10px;
+                            margin-top: -0.625rem;
                         }
                     }
     
                     .offer-flag-child2 {
                         @include flex($direction: row, $justify: flex-start);
                         .flag-item {
-                            width: 80px;
+                            width: 5rem;
                             height: auto;   
                         }
                     }
@@ -217,12 +217,12 @@
                         font-size: 1rem;
                     }
                     .btn-container {
-                        padding: 10px;
+                        padding: 0.625rem;
                         @include flex($justify: flex-start);
-                        column-gap: 10px;
+                        column-gap: 0.625rem;
                     
                         .btn {
-                            padding: 15px 20px;
+                            padding: 0.9375rem 1.25rem;
                             font-size: 1.1rem;
                         }
                     }
@@ -231,7 +231,7 @@
                     width: 80%;
                     img {
                         width: 100%;
-                        margin-top: -20px;
+                        margin-top: -1.25rem;
                     }
                 }
             }
@@ -259,7 +259,7 @@
                         font-size: 1.15rem;
                         margin-bottom: 1rem;
                         &:after {
-                            width: 60px;
+                            width: 3.75rem;
                         }
                     }
                     
@@ -279,14 +279,14 @@
                             margin-bottom: 1rem;
                             line-height: 1.8;
                             font-size: 1rem;
-                            margin-top: -10px;
+                            margin-top: -0.625rem;
                         }
                     }
     
                     .offer-flag-child2 {
                         @include flex($direction: row, $justify: flex-start);
                         .flag-item {
-                            width: 80px;
+                            width: 5rem;
                             height: auto;   
                         }
                     }
@@ -307,11 +307,11 @@
                         font-size: 1rem;
                     }
                     .btn-container {
-                        padding: 10px;
+                        padding: 0.625rem;
                         @include flex($justify: flex-start);
                     
                         .btn {
-                            padding: 20px 30px;
+                            padding: 1.25rem 1.875rem;
                             font-size: 1.3rem;
                         }
                     }
