@@ -1,7 +1,17 @@
 // Abstracts
-@use "abstracts/variables" as *;
-@use "abstracts/mixins" as *;
+@use "abstracts/" as *;
 
 // Base
-@use "base/reset";
-@use "base/typography";
+@use "base" as *;
+
+// Components
+@use "components/" as *;
+
+// Pages
+@use "pages";
+
+// Layout 
+@use "layout";
+
+// Pages
+@use "pages";

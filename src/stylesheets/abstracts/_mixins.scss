@@ -2,7 +2,7 @@
 
 // Media-Query Mixin
 @mixin mobile {
-  @media screen and (max-width: $mobile) {
+  @media (max-width: $mobile) {
     @content;
   }
 }
