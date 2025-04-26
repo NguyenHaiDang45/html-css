@@ -6,13 +6,14 @@
     background-color: $background-color;
     font-family: $primary-font;
     max-width: $mobile;
-    padding: 1rem 0;
+    padding-bottom: 1rem;
     .main-container {
         max-width: 100%;
         margin: 0 auto;
         .offer {
             padding: 0.625rem;
             @include flex($direction: column);
+            margin-bottom: 8rem;
             .offer-info {
                 .tagline1 {
                     color: $secondly-color;
@@ -94,55 +95,55 @@
                 }
             }
         }
-    }
-    .purchase {
-        padding: 0.625rem;
-        @include flex($direction: column);
-
-        .text-content {
-            h3 {
-                font-size: 2rem;
-                font-weight: 700;
-                line-height: 1.5;
-                color: $primary-color;
-                margin-bottom: 1rem;
-            }
-            .description {
-                color: color.adjust($primary-color, $lightness: 40%);
-                margin: 1rem 0;
-                line-height: 1.8;
-                font-size: 0.9375rem;
-            }
-            .btn-container {
-                padding: 0.625rem;
-                @include flex($justify: center);
-                column-gap: 0.625rem;
-            
-                .btn {
-                    margin: 0.625rem;
-                    border-radius: 1rem;
-                    min-width: 9.5625rem;
-                    min-height: 2.9375rem;
-                    padding: 0.9375rem 1.25rem;
+        .purchase {
+            padding: 0.625rem;
+            @include flex($direction: column);
+    
+            .text-content {
+                h3 {
+                    font-size: 2rem;
+                    font-weight: 700;
+                    line-height: 1.5;
+                    color: $primary-color;
+                    margin-bottom: 1rem;
                 }
-            
-                .buy {
-                    color: white;
-                    background-color: $secondly-color;
-                    border: none;
+                .description {
+                    color: color.adjust($primary-color, $lightness: 40%);
+                    margin: 1rem 0;
+                    line-height: 1.8;
+                    font-size: 0.9375rem;
                 }
-            
-                .find {
-                    color: $text-color;
-                    background-color: $background-color;
-                    border: 0.1875rem solid $secondly-color;
+                .btn-container {
+                    padding: 0.625rem;
+                    @include flex($justify: center);
+                    column-gap: 0.625rem;
+                
+                    .btn {
+                        margin: 0.625rem;
+                        border-radius: 1rem;
+                        min-width: 9.5625rem;
+                        min-height: 2.9375rem;
+                        padding: 0.9375rem 1.25rem;
+                    }
+                
+                    .buy {
+                        color: white;
+                        background-color: $secondly-color;
+                        border: none;
+                    }
+                
+                    .find {
+                        color: $text-color;
+                        background-color: $background-color;
+                        border: 0.1875rem solid $secondly-color;
+                    }
                 }
             }
-        }
-        .circle-container {
-            width: 80%;
-            img {
-                width: 100%;
+            .circle-container {
+                width: 80%;
+                img {
+                    width: 100%;
+                }
             }
         }
     }

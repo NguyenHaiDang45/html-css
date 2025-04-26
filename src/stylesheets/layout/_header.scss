@@ -42,23 +42,22 @@
           cursor: pointer;
           transition: all 0.3s;
           font-family: $primary-font;
+          color: white;
         }
     
         .header-auth-login {
           background-color: $button-bg;
-          color: white;
     
           &:hover {
-            background: rgba($button-bg, 0.5);
+            background: darken($button-bg, 10%);
           }
         }
     
         .header-auth-signup {
           background-color: $secondly-color;
-          color: white;
   
           &:hover {
-            background: rgba($secondly-color, 0.5);
+            background: darken($secondly-color, 10%);
           }
         }
       }
