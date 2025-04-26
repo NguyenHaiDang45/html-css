@@ -1,0 +1,14 @@
+@use "../abstracts/" as *;
+
+.list-item {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 1.5rem;
+    li {
+        margin: 1rem 0;
+        list-style: none;
+        a {
+            color: darken($background-color, 5%);
+        }
+    }
+}
