@@ -43,11 +43,27 @@
                 .personal-cmt {
                     @include flex($align: center);
                     column-gap: 1rem;
+                    padding: 1rem;
+                    border-radius: 0.7rem;
+                    transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    &:hover {
+                        background-color: adjust($background-color, $lightness: -10%);
+                        transform: translateY(-0.3125rem);
+                        box-shadow: 0 0.625rem 1.25rem adjust($primary-color, $lightness: 70%);
+                    }
+                    figure img:hover {
+                        cursor: pointer;
+                    }
                     .info {
                         width: 100%;
                         .name {
                             font-size: 1rem;
-                            font-weight: 500;
+                            object-fit: contain;
+                            max-width: 10rem;
+                            &:hover {
+                                font-weight: 700;
+                                cursor: pointer;
+                            }
                         }
                         .job {
                             font-size: 0.7rem;
@@ -60,6 +76,10 @@
                         height: auto;
                         img {
                             width: 100%;
+                            &:hover {
+                                cursor: pointer;
+                                filter: drop-shadow(0.3125rem 0.3125rem 0.625rem $secondly-color);
+                            }
                         }
                     }
                 }
