@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+@use "sass:color" as *;
 
 .header-main {
   background-color: $background-color;
@@ -8,15 +9,15 @@
   font-family: $primary-font;
   
   .container {
+    box-sizing: border-box;
     width: 100%;
     max-width: $mobile;
     margin: 0 auto;
     padding: 0 1rem;
 
     .header-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      @include flex($justify: space-between, $align: center);
+      width: 100%;
       position: relative;
 
       .header-logo {
@@ -26,75 +27,74 @@
         text-decoration: none;
       }
 
-      .header-nav {
+      .right-float {
         display: none;
-      }
-
-      .header-auth {
-        display: none;
-        gap: 0.5rem;
-    
-        button {
-          width: 6.25rem;
-          padding: 0.5rem 1rem;
-          border-radius: 0.25rem;
-          font-weight: 500;
-          cursor: pointer;
-          transition: all 0.3s;
-          font-family: $primary-font;
-          color: white;
-        }
-    
-        .header-auth-login {
-          background-color: $button-bg;
-    
-          &:hover {
-            background: darken($button-bg, 10%);
-          }
-        }
-    
-        .header-auth-signup {
-          background-color: $secondly-color;
   
-          &:hover {
-            background: darken($secondly-color, 10%);
+        .header-auth {
+          gap: 0.5rem;
+      
+          button {
+            width: 6.25rem;
+            padding: 0.5rem 1rem;
+            border-radius: 0.25rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-family: $primary-font;
+            color: white;
+          }
+      
+          .header-auth-login {
+            background-color: $button-bg;
+      
+            &:hover {
+              background: adjust($button-bg, $lightness: -10%);
+            }
+          }
+      
+          .header-auth-signup {
+            background-color: $secondly-color;
+    
+            &:hover {
+              background: adjust($secondly-color, $lightness: -10%);
+            }
           }
         }
       }
 
       .header-menu-item { 
         display: block; 
-
-        img {
-          width: 1.5rem;
-          height: 1.5rem;
-        }
       }
     }
   }
 
   @include tablet {
     .container {
-      max-width: $medium;
+      max-width: $tablet;
+      margin: 0 auto;
 
       .header-inner {
-        .header-nav {
+        @include flex($justify: space-between, $align: center);
+        .right-float {
+          @include flex();
           display: block;
-          position: static;
-          width: auto;
-          background: transparent;
-          @include flex($display: flex, $justify: space-between, $align: center);
-  
-          .nav-ul {
-            display: flex;
-            justify-content: right;
-            gap: 1.5rem;
-      
-            .header-nav-item {
-              border-bottom: none;
-              .header-nav-link {
-                font-size: 1.1rem;
-                padding: 0.5rem;
+          @include flex($justify: flex-end, $align: center);
+          gap: 1.5rem;
+          .header-nav {
+            display: block;
+            width: auto;
+    
+            .nav-ul {
+              display: flex;
+              justify-content: right;
+              gap: 1.5rem;
+        
+              .header-nav-item {
+                border-bottom: none;
+                .header-nav-link {
+                  font-size: 1.1rem;
+                  padding: 0.5rem;
+                }
               }
             }
           }
@@ -102,9 +102,8 @@
         .header-logo {
           font-size: 1.75rem;
         }
-        .header-menu-item img {
-          width: 1.875rem;
-          height: 1.875rem;
+        .header-menu-item {
+          display: none;
         }
       }
     }
@@ -113,32 +112,35 @@
   @include desktop { 
     .container {
       min-width: $extra-lager;
+      margin: 0 auto;
 
       .header-inner {
         gap: 3rem;
-        .header-nav {
+        .right-float {
+          @include flex();
+          gap: 2rem;
           display: block;
-          @include flex($display: flex, $justify: right, $align: center);
-      
-          .nav-ul {
-            display: flex;
-            gap: 1.5rem;
-      
-            .header-nav-item {
-              border-bottom: none;
-              .header-nav-link {
-                padding: 0.5rem;
+          @include flex($justify: flex-end, $align: center);
+          .header-nav {     
+            .nav-ul {
+              display: flex;
+              gap: 1.5rem;
+        
+              .header-nav-item {
+                border-bottom: none;
+                .header-nav-link {
+                  padding: 0.5rem;
+                }
               }
             }
+          }
+          .header-auth {
+            display: flex;
           }
         }
 
         .header-menu-item {
           display: none;
-        }
-
-        .header-auth {
-          display: flex;
         }
 
         .header-logo {

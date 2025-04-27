@@ -1,4 +1,5 @@
 @use "../../abstracts" as *;
+@use "sass:color" as *;
 
 .landing {
     @include flex($direction: column, $justify: space-between);
@@ -6,7 +7,7 @@
     max-width: $mobile;
     color: $background-color;
     min-height: 25rem;
-    background: linear-gradient(to bottom, $secondly-color, lighten($secondly-color, 10%));
+    background: linear-gradient(to bottom, $secondly-color, scale($secondly-color, $lightness: 10%));
     border-radius: 1rem;
     .container {
         width: 100%;

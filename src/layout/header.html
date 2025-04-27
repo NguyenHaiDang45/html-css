@@ -1,21 +1,22 @@
 <header class="header-main">
     <div class="container">
         <div class="header-inner">
-            <a href="#" class="header-logo">Tutorify</a>
-            
-            <nav class="header-nav">
-                <ul class="nav-ul">
-                    <include src="./components/navList.html" locals='{
-                      "classList":"header-nav-item",
-                      "classLink":"header-nav-link",
-                      "list":["Home", "Lessons", "Find Tutors", "About Us"]
-                    }'></include>
-                </ul>
-            </nav>
-            
-            <div class="header-auth">
-                <button class="header-auth-login">Login</button>
-                <button class="header-auth-signup">Sign Up</button>
+            <a href="#" class="header-logo">Tutorify</a>           
+            <div class="right-float">
+                <nav class="header-nav">
+                    <ul class="nav-ul">
+                        <include src="./components/navList.html" locals='{
+                          "classList":"header-nav-item",
+                          "classLink":"header-nav-link",
+                          "list":["Home", "Lessons", "Find Tutors", "About Us"]
+                        }'></include>
+                    </ul>
+                </nav>
+                
+                <div class="header-auth">
+                    <button class="header-auth-login">Login</button>
+                    <button class="header-auth-signup">Sign Up</button>
+                </div>
             </div>
             <div class="header-menu-item">
                 <a href="#"><img src="/src/assets/icons/ci_hamburger.svg" alt="hamburger icon"></a>

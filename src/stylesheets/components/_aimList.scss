@@ -1,4 +1,5 @@
 @use "../abstracts/" as *;
+@use "sass:color" as *;
 
 .aim-item {
     @include flex($justify: center, $align: center);
@@ -31,7 +32,7 @@
             margin-bottom: 1rem;
         }
         .content-description {
-            color: lighten($primary-color, 40%);
+            color: adjust($primary-color, $lightness: 40%);
             font-size: 0.8rem;
             list-style: disc;
             line-height: 1.5;

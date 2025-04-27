@@ -1,4 +1,5 @@
 @use "../../abstracts" as *;
+@use "sass:color" as *;
 
 .instruction {
     @include flex($direction: column, $justify: space-between);
@@ -26,7 +27,7 @@
                 }
                 .description {
                     font-size: 1rem;
-                    color: lighten($primary-color, 40%);
+                    color: scale($primary-color, $lightness: 40%);
                     line-height: 1.8;
                 }
             }
@@ -94,7 +95,7 @@
                                 color: $secondly-color;
                             }
                             .content-description {
-                                color: lighten($primary-color, 20%);
+                                color: adjust($primary-color, $lightness: 20%);
                                 font-size: 0.8rem;
                                 line-height: 1.5;
                             }

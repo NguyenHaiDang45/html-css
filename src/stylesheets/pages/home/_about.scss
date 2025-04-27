@@ -1,4 +1,5 @@
 @use "../../abstracts/" as *;
+@use "sass:color" as *;
 
 .about {
     @include flex($direction: column, $justify: space-between);
@@ -20,7 +21,7 @@
             }
             .description {
                 font-size: 1rem;
-                color: lighten($primary-color, 40%);
+                color: adjust($primary-color, $lightness: 40%);
                 line-height: 1.8;
             }
         }
@@ -36,7 +37,7 @@
                 .description {
                     font-size: 1rem;
                     font-style: italic;
-                    color: lighten($primary-color, 40%);
+                    color: adjust($primary-color, $lightness: 40%);
                     line-height: 1.8;
                 }
                 .personal-cmt {
@@ -50,7 +51,7 @@
                         }
                         .job {
                             font-size: 0.7rem;
-                            color: lighten($primary-color, 40%);
+                            color: adjust($primary-color, $lightness: 40%);
                         }
                     }
                     .icon {
