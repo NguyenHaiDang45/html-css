@@ -62,8 +62,12 @@
     }
     .tutor-section {
         padding: 0 1rem;
-        width: 100%;
         object-fit: contain;
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
     }
 }
 
