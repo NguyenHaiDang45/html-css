@@ -5,6 +5,7 @@
     max-width: $mobile;
     color: $background-color;
     background-color: $bg-footer;
+    margin-top: 5rem;
     .container {
         width: 100%;
         padding: 2rem 0;
@@ -19,14 +20,22 @@
                     font-size: 1.7rem;
                     letter-spacing: 0.1rem;
                     font-weight: 700;
+                    &:hover {
+                        cursor: pointer;
+                    }
                 }
                 .description {
                     font-size: 0.8rem;
                 }
                 .icon-lists {
                     @include flex($align: center);
-                    figure {
-                        cursor: pointer;
+                    gap: 1rem;
+                    figure img {
+                        transition: transform 0.3s ease;
+                        &:hover {
+                            cursor: pointer;
+                            transform: translateY(-5px);
+                        }
                     }
                 }
             }
@@ -38,6 +47,7 @@
                         @include flex($justify: space-between, $align: center);
                         border-top: 0.0625rem solid $background-color;
                         border-bottom: 0.0625rem solid $background-color;
+                        font-weight: 700;
                         .list-title {
                             padding: 1rem 2rem;
                         }
@@ -48,6 +58,9 @@
                                 width: 100%;
                             }
                         }
+                        &:hover {
+                            cursor: pointer;
+                        }
                     }
                     .list-item {
                         display: none;
@@ -57,9 +70,10 @@
         }
         .copyright {
             @include flex($justify: center, $align: center);
-            padding-top: 3rem;
+            margin-top: 4rem;
             p {
-                font-size: 1.2rem;
+                font-size: 1rem;
+                font-weight: 600;
             }
         }
     }
@@ -71,6 +85,7 @@
         padding: 2rem 0 0 0;
         max-width: $tablet;
         min-height: 31rem;
+        margin-top: 5rem;
         .container {
             @include flex($direction: column, $justify: space-between);
             .content {
@@ -110,9 +125,6 @@
             }
             .copyright {
                 margin-top: 8rem;
-                p {
-                    font-size: 1rem;
-                }
             }
         }
     }
@@ -160,9 +172,6 @@
             }
             .copyright {
                 margin-top: 8rem;
-                p {
-                    font-size: 1rem;
-                }
             }
         }
     }

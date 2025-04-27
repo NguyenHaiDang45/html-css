@@ -11,7 +11,16 @@
     gap: 2rem;
     border-radius: 16px;
     margin: 1rem;
+    padding-left: 1rem;
     object-fit: contain;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        cursor: pointer;
+        background-color: adjust($background-color, $lightness: -10%);
+        transform: translateY(-0.3125rem);
+        box-shadow: 0 0.625rem 1.25rem adjust($primary-color, $lightness: 70%);
+    }
 
     .aim-item-icon {
         width: 24px;
@@ -40,6 +49,9 @@
             span {
                 color: $button-bg;
                 font-weight: 300;
+                &:hover {
+                    text-decoration: underline;
+                }
             }
         }
     }

@@ -35,9 +35,15 @@
             .icon-face {
                 @include flex($align: center);
                 gap: 1rem;
+                &:hover {
+                    cursor: pointer;
+                }
                 .other {
                     text-decoration: underline;
-                    cursor: pointer;
+                    &:hover {
+                        cursor: pointer;
+                        color: $bg-color-circle-2;
+                    }
                 }
             }
         }
@@ -45,11 +51,15 @@
             min-height: 8rem;
             @include flex($align: center);
             button {
-                padding: 1rem 2rem;
+                padding: 1.5rem 2rem;
                 color: $text-color;
                 font-size: 1rem;
                 font-weight: 600;
                 border-radius: 0.5rem;
+                &:hover {
+                    cursor: pointer;
+                    background-color: adjust($background-color, $lightness: -20%);
+                }
             }
         }
     }
