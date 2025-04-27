@@ -74,19 +74,18 @@
 
                 .offer-flag-child2 {
                     display: grid;
-                    grid-template-columns: auto auto auto auto;
+                    grid-template-columns: repeat(4, 1fr);
                     .flag-item {
                         filter: drop-shadow(0 0 0.5rem #00000099);
-                        width: 7.5rem;
-                        height: auto;   
+                        width: 100%;
+                        max-width: 4rem;
+                        height: auto;  
                     }
                 
                     .view-all {
-                        @include flex($justify: center, $align: center);
+                        @include flex($align: center);
                         color: $text-color;
                         column-gap: 0.3125rem;
-                        padding: 0.5rem;
-                        border-radius: 0.5rem;
                         max-height: fit-content;
 
                         p:hover {
