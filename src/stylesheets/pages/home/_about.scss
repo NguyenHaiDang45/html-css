@@ -75,7 +75,7 @@
                         width: 3rem;
                         height: auto;
                         img {
-                            width: 100%;
+                            width: fit-content;
                             &:hover {
                                 cursor: pointer;
                                 filter: drop-shadow(0.3125rem 0.3125rem 0.625rem $secondly-color);

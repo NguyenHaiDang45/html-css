@@ -96,10 +96,9 @@
         .tutor-section {
             width: 60%;
             padding: 0;
-            @include flex($direction: column, $justify: center, $align:center);
+            @include flex($direction: column, $justify: center);
             img {
                 width: 90%;
-                margin-top: -30%;
             }
         }
     }
