@@ -29,9 +29,9 @@
             @include flex($justify: space-between);
             gap: 1rem;
             .content {
-                @include flex($direction: column, $justify: space-between);
+                @include flex($direction: column, $justify: center);
                 row-gap: 1rem;
-                .star-list {
+                .star-list ul {
                     @include flex;
                 }
                 .description {
@@ -45,6 +45,7 @@
                     column-gap: 1rem;
                     padding: 1rem;
                     border-radius: 0.7rem;
+                    object-fit: contain;
                     transition: transform 0.3s ease, box-shadow 0.3s ease;
                     &:hover {
                         background-color: adjust($background-color, $lightness: -10%);
@@ -74,6 +75,7 @@
                         right: 0;
                         width: 3rem;
                         height: auto;
+                        margin-right: 2rem;
                         img {
                             width: fit-content;
                             &:hover {
