@@ -72,11 +72,13 @@
                     </p>
                 </div>
                 <div class="aim-content">
-                    <include src="./components/aimList.html" locals='{
-                        "list":[{"contentA": "1-on-1 lessons in more than 150 languages", "contentB": "Learn from certified teachers with proven experience.."},
-                                {"contentA": "Pratice for free with the italki community", "contentB": "Devolop your language skills by building connection with others.."},
-                                {"contentA": "Take learning beyond the classroom", "contentB": "Learn from certified teachers with proven experience.."}]
-                    }'></include>
+                    <ul>
+                        <include src="./components/aimList.html" locals='{
+                            "list":[{"contentA": "1-on-1 lessons in more than 150 languages", "contentB": "Learn from certified teachers with proven experience.."},
+                                    {"contentA": "Pratice for free with the italki community", "contentB": "Devolop your language skills by building connection with others.."},
+                                    {"contentA": "Take learning beyond the classroom", "contentB": "Learn from certified teachers with proven experience.."}]
+                        }'></include>
+                    </ul>
                 </div>
             </div>
             <figure class="container-img">
@@ -146,9 +148,11 @@
                 </figure>
                 <div class="content">
                     <div class="star-list">
-                        <include src="./components/starList.html" locals='{
-                            "list": ["star", "star", "star", "star", "star"]
-                        }'></include>
+                        <ul>
+                            <include src="./components/starList.html" locals='{
+                                "list": ["star", "star", "star", "star", "star"]
+                            }'></include>
+                        </ul>
                     </div>
                     <p class="description">"With Edu Smart, we can make it easier for you to master a foriegn language, it is important for us to grow and engage with our students</p>
                     <div class="personal-cmt">
@@ -164,9 +168,11 @@
                         </figure>
                     </div>
                     <div class="star-list">
-                        <include src="./components/dotList.html" locals='{
-                            "list": ["full-dot", "normal-dot", "normal-dot", "normal-dot", "normal-dot"]
-                        }'></include>
+                        <ul>
+                            <include src="./components/dotList.html" locals='{
+                                "list": ["full-dot", "normal-dot", "normal-dot", "normal-dot", "normal-dot"]
+                            }'></include>
+                        </ul>
                     </div>
                 </div>
             </div>
