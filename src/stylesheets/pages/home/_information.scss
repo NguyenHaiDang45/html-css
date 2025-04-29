@@ -75,27 +75,37 @@
                 .offer-flag-child2 {
                     display: grid;
                     grid-template-columns: repeat(4, 1fr);
+                    padding-right: 1rem;
+                    @media (max-width: 500px) {
+                        grid-template-columns: repeat(3, 1fr);
+                    }
+                    @media (max-width: 300px) {
+                        grid-template-columns: repeat(2, 1fr);
+                    }
+                    @media (max-width: 200px) {
+                        grid-template-columns: auto;
+                    }
                     .flag-item {
                         filter: drop-shadow(0 0 0.5rem #00000099);
                         width: 100%;
                         max-width: 4rem;
                         height: auto;  
                     }
-                
                     .view-all {
                         @include flex($align: center);
                         color: $text-color;
-                        column-gap: 0.3125rem;
-                        max-height: fit-content;
-
-                        p:hover {
-                            text-decoration: underline;
-                            cursor: pointer;
+                        column-gap: 0.2rem;
+                        height: fit-content;
+                        p {
+                            white-space: nowrap;
+                            p:hover {
+                                text-decoration: underline;
+                                cursor: pointer;
+                            }
                         }
-                
                         img {
-                            width: 1.75rem;
-                            height: 1.7rem;
+                            max-width: 1.75rem;
+                            max-height: 1.7rem;
                             flex-shrink: 0;
                             &:hover {
                                 cursor: pointer;
@@ -107,8 +117,7 @@
         }
         .purchase {
             padding: 0.625rem;
-            @include flex($direction: column);
-    
+            @include flex($direction: column);   
             .text-content {
                 h3 {
                     font-size: 2rem;
@@ -216,6 +225,9 @@
                         .flag-item {
                             width: 5rem;
                             height: auto;   
+                        }
+                        .view-all {
+                            margin-left: -1.4rem;
                         }
                     }
                 }
