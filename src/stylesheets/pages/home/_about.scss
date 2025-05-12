@@ -54,6 +54,7 @@
                             font-style: italic;
                             color: adjust($primary-color, $lightness: 40%);
                             line-height: 1.8;
+                            margin-bottom: 1rem;
                         }
                         .personal-cmt {
                             @include flex($align: center);
@@ -83,7 +84,8 @@
                     .icon {
                         width: 30%;
                         height: auto;
-                        margin-top: 6rem;
+                        margin-top: 7.6rem;
+                        margin-left: -4rem;
                         object-fit: contain;
                         img {
                             &:hover {

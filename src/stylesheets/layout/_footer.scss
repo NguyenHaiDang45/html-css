@@ -11,7 +11,7 @@
         padding: 2rem 0;
         @include flex($direction: column, $justify: center);
         .content {
-            @include flex($direction: column, $justify: center);
+            @include flex($direction: column, $justify: flex-start);
             .footer-tutorify {
                 @include flex($direction: column, $justify: center);
                 padding: 1rem 2rem;
@@ -136,29 +136,33 @@
         padding: 4rem 2rem 0 2rem;
         min-width: 100%;
         min-height: 35rem;
+        @include flex($justify: center);
         .container {
+            @include flex($justify: center, $align: center);
+            max-width: $extra-lager;
             .content {
                 @include flex($direction: row);
                 margin-bottom: 2rem;
                 .footer-tutorify {
-                    @include flex($direction: column, $justify: center);
-                    width: 40%;
-                    padding-left: 3rem;
+                    @include flex($direction: column, $justify: flex-start);
+                    width: 30%;
+                    padding: 0;
                     h3 {
                         font-size: 2rem;
                     }
                 }
                 .footer-nav {
-                    width: 60%;
+                    width: 70%;
                     @include flex($direction: row, $justify: flex-start);
                     .footer-nav-list {
                         margin-right: 3rem;
+                        min-width: 9rem;
                         .title {
                             @include flex($justify: flex-start, $align: center);
                             border: none;
                             .list-title {
                                 padding: 0;
-                                font-size: 1.2rem;
+                                font-size: 1.1rem;
                             }
                             figure {
                                 display: none;
@@ -167,6 +171,9 @@
                         .list-item {
                             display: block;
                         }
+                    }
+                    .list-sp {
+                        min-width: 11.5rem;
                     }
                 }
             }
